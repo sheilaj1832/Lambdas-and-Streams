@@ -19,7 +19,7 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 			for (int i = 0; i < grades.size(); i++) {
 				System.out.println(grades.get(i));
 			}
-			System.out.println("\nGrades via enhanced for / for each loop");
+			System.out.println("\nGrades via enhanced for loop");
 			for (int grade: grades) {
 				System.out.println(grade);
 			}
@@ -46,7 +46,10 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 			
 			
 			System.out.println("\nPeople via stream, print just the names");
-			people.stream().forEach(person->System.out.println(person.getName()));
+			people.stream().forEach(person->person.);
+
+			
+			
 		}
 
 	}

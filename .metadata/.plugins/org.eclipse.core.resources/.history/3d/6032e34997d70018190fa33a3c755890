@@ -19,7 +19,7 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 			for (int i = 0; i < grades.size(); i++) {
 				System.out.println(grades.get(i));
 			}
-			System.out.println("\nGrades via enhanced for / for each loop");
+			System.out.println("\nGrades via enhanced for loop");
 			for (int grade: grades) {
 				System.out.println(grade);
 			}
@@ -31,7 +31,7 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 			Person p2 = new Person(2,"Sally","222 Main St.");
 			Person p3 = new Person(3,"Adam","333 Broadway");
 			
-			ArrayList<Person> people = new ArrayList<>(); //Array list with a capital P it casts it as a generic, so we don't need to do it later.
+			ArrayList<Person> people = new ArrayList<>();
 			people.add(p1);
 			people.add(p2);
 			people.add(p3);
@@ -41,12 +41,11 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 				System.out.println(people.get(i));
 
 			}
-			System.out.println("\nPeople via stream, tostring");
-			people.stream().forEach(System.out::println);
-			
 			
 			System.out.println("\nPeople via stream, print just the names");
-			people.stream().forEach(person->System.out.println(person.getName()));
+
+			
+			
 		}
 
 	}

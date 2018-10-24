@@ -46,7 +46,10 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 			
 			
 			System.out.println("\nPeople via stream, print just the names");
-			people.stream().forEach(person->System.out.println(person.getName()));
+			people.stream().forEach(person->person.);
+
+			
+			
 		}
 
 	}
