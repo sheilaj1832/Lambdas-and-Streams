@@ -31,7 +31,7 @@ public class Movie {
 	}
 	@Override
 	public String toString() {
-		return "Movie [title=" + title + ", year=" + year + ", rating=" + rating + "]";
+		return title + " (" + year + " )Rating " + rating;
 	}
 	
 	

@@ -1,5 +1,6 @@
 package business;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -55,13 +56,19 @@ public class MovieCollection {
 		
 		return hr;
 	}
-	public double getAverageRating() {
+	public String getAverageRating() {
 		
 		double sum = movies.stream()
 				.map(r -> r.getRating())
-				.reduce(0.0, (a,b) -> Math.max(a,b));
-		
-		return sum/movies.size();
+				.reduce(0.0, (a,b) -> (a+b));
+		NumberFormat nf = NumberFormat.getNumberInstance();
+		nf.setMaximumFractionDigits(2);
+			
+		return nf.format(sum/movies.size());
+	}
+
+	public int getSize() {
+		return movies.size();
 	}
 }
 
